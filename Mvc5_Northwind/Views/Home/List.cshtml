@@ -1,0 +1,25 @@
+﻿@model MixedViewModel
+
+@{
+    ViewBag.Title = "List";
+
+    List<Product> products = Model.Products;
+    List<Employee> employees = Model.Employees;
+}
+
+<h2>List</h2>
+
+<ul>
+    @foreach(var prod in products)
+     {
+        <li>@prod.ProductID, @prod.ProductName, @prod.UnitPrice</li>
+     }
+</ul>
+<hr />
+
+<ul>
+    @foreach (var emp in employees)
+    {
+        <li>@emp.EmployeeID, @emp.FirstName, @emp.Title</li>
+    }
+</ul>
